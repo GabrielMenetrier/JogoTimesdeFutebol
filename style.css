@@ -171,3 +171,28 @@ main {
     80% { opacity: 1; }
     100% { transform: translateY(600px) scale(0.7) rotate(360deg); opacity: 0; }
 }
+
+/* Adicione ao style.css */
+.ads-left, .ads-right {
+    position: fixed;
+    top: 0;
+    width: 160px;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    pointer-events: auto;
+}
+.ads-left {
+    left: 0;
+}
+.ads-right {
+    right: 0;
+}
+@media (max-width: 900px) {
+    .ads-left, .ads-right {
+        display: none;
+    }
+}
