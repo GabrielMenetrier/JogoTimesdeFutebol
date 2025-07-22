@@ -36,6 +36,7 @@ function makeGuess() {
         message.textContent = `Parabéns! Você acertou! O time era ${secretTeam.nome}.`;
         guessBtn.disabled = true;
         input.disabled = true;
+        showConfetti(); // Adiciona animação de confetes
         return;
     }
 
@@ -106,6 +107,22 @@ function addAttemptRow(guessTeam, secretTeam) {
     row.appendChild(td);
 
     resultsTable.appendChild(row);
+}
+
+function showConfetti() {
+    const colors = ['#00ff88', '#ffe066', '#ff4c4c', '#fff', '#8b8b8b', '#00cc6a', '#22cc00', '#9b7c00'];
+    const container = document.getElementById('confetti-container');
+    for (let i = 0; i < 40; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = (window.innerWidth / 2 + (Math.random() - 0.5) * 300) + 'px';
+        confetti.style.top = (window.innerHeight / 2 - 60) + 'px';
+        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+        confetti.style.animationDelay = (Math.random() * 0.5) + 's';
+        container.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 1500);
+    }
 }
 
 // Adiciona evento ao botão
