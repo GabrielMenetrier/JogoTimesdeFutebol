@@ -1,0 +1,149 @@
+/* style.css */
+
+body {
+    background: #181818;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #00ff88;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #aaa;
+    margin-top: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #222;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0008;
+    padding: 32px;
+}
+
+#guess-section {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+#team-input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+#guess-btn {
+    background: #00ff88;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#guess-btn:hover {
+    background: #00cc6a;
+}
+
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+    margin-bottom: 24px;
+}
+
+#results-table th {
+    background: #333;
+    color: #8b8b8b; /* Troque de #00ff88 para branco */
+    padding: 8px;
+    font-size: 1rem;
+}
+
+#results-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    font-size: 0.98rem;
+}
+
+#results-table tr:nth-child(even) td {
+    background: #232323;
+}
+
+#results-table tr:nth-child(odd) td {
+    background: #1a1a1a;
+}
+
+/* Feedback visual nas células */
+.cell-green {
+    background: #007e0aa2 !important;
+    color: #22cc00 !important;
+    font-weight: bold;
+}
+.cell-yellow {
+    background: #403d23 !important;
+    color: #9b7c00 !important;
+    font-weight: bold;
+}
+.cell-white {
+    background: #fff !important;
+    color: #222 !important;
+    font-weight: bold;
+}
+.cell-red {
+    background: #402323 !important;
+    color: #ff4c4c !important;
+    font-weight: bold;
+}
+
+/* Mensagem */
+#game-message {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    color: #ffe066;
+}
+
+#suggestions {
+    position: absolute;
+    background: #222;
+    color: #e0e0e0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px #0006;
+    width: 220px;
+    z-index: 10;
+}
+#suggestions li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #333;
+}
+#suggestions li:last-child {
+    border-bottom: none;
+}
+#suggestions li:hover {
+    background: #333;
+    color: #00ff88;
+    cursor: pointer;
+}

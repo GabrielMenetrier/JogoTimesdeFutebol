@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Times</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo dos Times</h1>
+        <p>Tente adivinhar o time de futebol! Digite o nome de um time e veja as dicas.</p>
+    </header>
+
+    <main>
+        <!-- Campo para chutar o time -->
+        <section id="guess-section">
+            <input type="text" id="team-input" placeholder="Digite o nome do time">
+            <button id="guess-btn">Chutar</button>
+            <ul id="suggestions"></ul>
+        </section>
+
+        <!-- Tabela para mostrar tentativas e dicas -->
+        <section id="results-section">
+            <table id="results-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>País</th>
+                        <th>Cidade</th>
+                        <th>Divisão</th>
+                        <th>Campeonato</th>
+                        <th>Ano de Fundação</th>
+                        <th>Tamanho da Torcida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tentativas aparecerão aqui via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Mensagem de vitória ou derrota -->
+        <section id="message-section">
+            <p id="game-message"></p>
+        </section>
+    </main>
+
+    <script src="data/teams.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
